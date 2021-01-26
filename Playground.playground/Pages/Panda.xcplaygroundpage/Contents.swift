@@ -5,7 +5,7 @@
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
 let preferredWidth = 300
-let preferredHeight = 600
+let preferredHeight = 500
 /*:
  ## Required code
  
@@ -45,8 +45,8 @@ canvas.drawShapesWithBorders = true
 canvas.fillColor = Color(hue: 180, saturation: 100, brightness: 90, alpha: 100)
 canvas.drawRectangle(at: Point(x: 0, y: 200), width: 300, height: 400)
 
-canvas.fillColor = Color(hue: 180, saturation: 100, brightness: 90, alpha: 100)
-canvas.drawRectangle(at: Point(x: 0, y: 200), width: 300, height: 400)
+canvas.fillColor = Color(hue: 130, saturation: 100, brightness: 80, alpha: 100)
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 300, height: 200)
 
 //body
 canvas.fillColor = Color.white

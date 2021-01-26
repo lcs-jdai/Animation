@@ -1,11 +1,10 @@
-//: [Previous](@previous) / [Next](@next)
 /*:
 ## Canvas size
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 600
-let preferredHeight = 600
+let preferredWidth = 300
+let preferredHeight = 300
 /*:
  ## Required code
  
@@ -36,9 +35,23 @@ PlaygroundPage.current.liveView = canvas
 
  */
 
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
+//Background
+canvas.drawAxes(withScale: true, by: 20)
 
+//
+canvas.highPerformance = true
+for x in stride(from: 0, through: 300, by: 1) {
+    
+    //set the color
+    let red = Color(hue: 0, saturation: 80, brightness: x/3, alpha: 100)
+    canvas.lineColor = red
+    
+    //draw a line
+    canvas.drawLine(from: Point(x: x, y: 0), to: Point(x: x, y: 300))
+    
+}
+
+canvas.highPerformance = false
 /*:
  ## Show the Live View
  Don't see any results?
